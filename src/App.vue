@@ -43,7 +43,7 @@ const isLogin = ref<boolean>(false)
           <v-list-item prepend-icon="mdi-account" title="帳號資訊" value="account" to="/profile"></v-list-item>
           <v-list-item prepend-icon="mdi-note-text-outline" title="筆記" value="notes" to="/notes"></v-list-item>
           <v-list-item prepend-icon="mdi-human-male-board" title="課程" value="courses" to="/courses"></v-list-item>
-          <v-list-item prepend-icon="mdi-logout" title="登出" @click="isLogin = false; drawer = false"></v-list-item>
+          <v-list-item prepend-icon="mdi-logout" title="登出" @click="isLogin = false; drawer = false" to="/"></v-list-item>
         </v-list>
     </v-navigation-drawer>
 
