@@ -1,23 +1,32 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
-
+import { RouterView, useRouter } from "vue-router";
 import { ref } from "vue";
 
 const drawer = ref<boolean>(false);
 const isLogin = ref<boolean>(false);
+
+const router = useRouter();
+
+function navigateHome() {
+  router.push('/');
+}
 </script>
 
 <template>
   <v-app id="inspire">
     <v-app-bar>
-      <v-toolbar-title to="/">GenAI Star Demo</v-toolbar-title>
+      <v-toolbar-title @click="navigateHome">GenAI Star Demo</v-toolbar-title>
+      <v-btn to="/resource">學習資源</v-btn>
+      <v-btn to="/resource">學習資源</v-btn>
       <v-btn to="/resource">學習資源</v-btn>
       <v-spacer />
-      <v-btn v-if="!isLogin" @click="isLogin = true">登入</v-btn>
-      <v-app-bar-nav-icon
-        v-if="isLogin"
-        @click="drawer = !drawer"
-      ></v-app-bar-nav-icon>
+      <div style="width: 100px;" class="d-flex justify-center">
+        <v-btn v-if="!isLogin" @click="isLogin = true">登入</v-btn>
+        <v-app-bar-nav-icon
+          v-if="isLogin"
+          @click="drawer = !drawer"
+        ></v-app-bar-nav-icon>
+      </div>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" location="right" temporary>
