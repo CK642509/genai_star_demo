@@ -46,26 +46,39 @@
           <v-row>
             <template v-for="note of notes">
               <v-col cols="3">
-                <v-card color="light-blue-lighten-5" class="mx-4">
-                  <v-card-title>
-                    <strong>症狀描述</strong>
-                  </v-card-title>
-                  <v-card-text>
-                    {{ note.note }}
-                  </v-card-text>
-                  <v-card-title>
-                    <strong>哪一個說法，更精準描述你的狀況?</strong>
-                  </v-card-title>
-                  <v-card-text>
-                    {{ note.ans1 }}
-                  </v-card-text>
-                  <v-card-title>
-                    <strong>是否也有以下症狀?</strong>
-                  </v-card-title>
-                  <v-card-text>
-                    {{ note.ans2 }}
-                  </v-card-text>
-                </v-card>
+                <v-hover>
+                  <template v-slot:default="{ isHovering, props }">
+                    <v-card v-bind="props" color="light-blue-lighten-5" class="mx-4">
+                      <template v-slot:prepend>
+                        <v-card-title>
+                          <strong>日期</strong>
+                        </v-card-title>
+                      </template>
+                      <template v-slot:append>
+                        <v-btn v-show="isHovering" icon="mdi-eye" flat variant="text"
+                        size="xs"></v-btn>
+                        <v-btn v-show="isHovering" icon="mdi-pencil" flat variant="text"
+                            size="xs"
+                          class="ml-2"></v-btn>
+                      </template>
+                      <v-card-text>
+                        {{ note.note }}
+                      </v-card-text>
+                      <v-card-title>
+                        <strong>哪一個說法，更精準描述你的狀況?</strong>
+                      </v-card-title>
+                      <v-card-text>
+                        {{ note.ans1 }}
+                      </v-card-text>
+                      <v-card-title>
+                        <strong>是否也有以下症狀?</strong>
+                      </v-card-title>
+                      <v-card-text>
+                        {{ note.ans2 }}
+                      </v-card-text>
+                    </v-card>
+                  </template>
+                </v-hover>
               </v-col>
             </template>
 
