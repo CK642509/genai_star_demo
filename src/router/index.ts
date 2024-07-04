@@ -28,6 +28,16 @@ const router = createRouter({
       name: "courses",
       component: () => import("../views/CourseView.vue"),
     },
+    {
+      path: "/copilot",
+      name: "copilot",
+      component: () => import("../views/CopilotView.vue"),
+    },
+    {
+      path: "/decision-tool",
+      name: "decision-tool",
+      component: () => import("../views/DecisionToolView.vue"),
+    },
     // {
     //   path: '/about',
     //   name: 'about',

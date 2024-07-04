@@ -16,9 +16,9 @@ function navigateHome() {
   <v-app id="inspire">
     <v-app-bar>
       <v-toolbar-title @click="navigateHome">GenAI Star Demo</v-toolbar-title>
+      <v-btn to="/copilot">Copilot</v-btn>
       <v-btn to="/resource">學習資源</v-btn>
-      <v-btn to="/resource">學習資源</v-btn>
-      <v-btn to="/resource">學習資源</v-btn>
+      <v-btn to="/decision-tool">決策工具</v-btn>
       <v-spacer />
       <div style="width: 100px;" class="d-flex justify-center">
         <v-btn v-if="!isLogin" @click="isLogin = true">登入</v-btn>
