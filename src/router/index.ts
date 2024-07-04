@@ -8,6 +8,26 @@ const router = createRouter({
       name: 'home',
       component: () => import('../views/HomeView.vue')
     },
+    {
+      path: '/resource',
+      name: 'resource',
+      component: () => import('../views/ResourceView.vue')
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('../views/ProfileView.vue')
+    },
+    {
+      path: '/notes',
+      name: 'notes',
+      component: () => import('../views/NoteView.vue')
+    },
+    {
+      path: '/courses',
+      name: 'courses',
+      component: () => import('../views/CourseView.vue')
+    },
     // {
     //   path: '/about',
     //   name: 'about',
