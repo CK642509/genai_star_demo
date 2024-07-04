@@ -75,6 +75,11 @@ const addNote = () => {
     ans2: ans2.value,
   };
   emit("addNote", newNote);
+
+  // Reset the form
+  note.value = null;
+  ans1.value = null;
+  ans2.value = null;
   dialog.value = false;
 };
 
