@@ -1,32 +1,32 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: () => import('../views/HomeView.vue')
+      path: "/",
+      name: "home",
+      component: () => import("../views/HomeView.vue"),
     },
     {
-      path: '/resource',
-      name: 'resource',
-      component: () => import('../views/ResourceView.vue')
+      path: "/resource",
+      name: "resource",
+      component: () => import("../views/ResourceView.vue"),
     },
     {
-      path: '/profile',
-      name: 'profile',
-      component: () => import('../views/ProfileView.vue')
+      path: "/profile",
+      name: "profile",
+      component: () => import("../views/ProfileView.vue"),
     },
     {
-      path: '/notes',
-      name: 'notes',
-      component: () => import('../views/NoteView.vue')
+      path: "/notes",
+      name: "notes",
+      component: () => import("../views/NoteView.vue"),
     },
     {
-      path: '/courses',
-      name: 'courses',
-      component: () => import('../views/CourseView.vue')
+      path: "/courses",
+      name: "courses",
+      component: () => import("../views/CourseView.vue"),
     },
     // {
     //   path: '/about',
@@ -36,7 +36,7 @@ const router = createRouter({
     //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/AboutView.vue')
     // }
-  ]
-})
+  ],
+});
 
-export default router
+export default router;
